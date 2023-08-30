@@ -1593,6 +1593,12 @@ definitions:
         title: Password
         type: string
         minLength: 1
+      is_superuser:
+        title: Superuser status
+        description: Designates that this user has all permissions without explicitly
+          assigning them.
+        type: boolean
+        readOnly: true
   User:
     required:
       - username
@@ -1850,6 +1856,7 @@ definitions:
           - ADMIN
           - DEVELOPER
           - VIEWER
+          - OWNER
       data_status:
         title: Data status
         description: New data status.
